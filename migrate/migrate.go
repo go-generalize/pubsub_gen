@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/ORG_NAME/REPO_NAME/server/infra/pubsub"
+	"github.com/gcp-kit/pubsub-gen/infra"
 
-	"github.com/ORG_NAME/REPO_NAME/server/tools/pubsub_generator/misc"
+	"github.com/gcp-kit/pubsub-gen/misc"
 )
 
 func Main() {
@@ -62,7 +62,7 @@ func runMigrate(ctx context.Context, dryRun bool, projectID string) error {
 		desiredTopics[topic] = struct{}{}
 	}
 
-	client, err := pubsub.NewClient(ctx, projectID)
+	client, err := infra.NewClient(ctx, projectID)
 
 	if err != nil {
 		return err

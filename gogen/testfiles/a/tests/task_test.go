@@ -9,8 +9,8 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/ORG_NAME/REPO_NAME/server/infra/pubsub"
-	task "github.com/ORG_NAME/REPO_NAME/server/tools/pubsub_generator/gogen/testfiles/a"
+	task "github.com/gcp-kit/pubsub-gen/gogen/testfiles/a"
+	"github.com/gcp-kit/pubsub-gen/infra"
 )
 
 type subscriber struct {
@@ -27,7 +27,7 @@ func (*subscriber) Run(ctx context.Context, message *task.Task) error {
 func TestPubsub(t *testing.T) {
 	taskFunctionsHandler := task.NewPubSubHandler(&subscriber{})
 
-	client := pubsub.NewFakeClient(taskFunctionsHandler.PubSubHandler)
+	client := infra.NewFakeClient(taskFunctionsHandler.PubSubHandler)
 
 	publisher := task.NewPublisher(client)
 

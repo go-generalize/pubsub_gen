@@ -9,7 +9,7 @@ import (
 	"strings"
 	"text/template"
 
-	"github.com/ORG_NAME/REPO_NAME/server/tools/pubsub_generator/misc"
+	"github.com/gcp-kit/pubsub-gen/misc"
 
 	"github.com/iancoleman/strcase"
 )
