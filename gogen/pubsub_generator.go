@@ -46,7 +46,7 @@ type publisher struct {
 	pubsubClient infra.Client
 }
 
-func NewPublisher(pubsubClient pubsub.Client) Publisher {
+func NewPublisher(pubsubClient infra.Client) Publisher {
 	return &publisher{pubsubClient: pubsubClient}
 }
 
@@ -72,7 +72,7 @@ func NewPubSubHandler(sub Subscriber) *pubSubHandler {
 	return &pubSubHandler{sub: sub}
 }
 
-func (h *pubSubHandler) PubSubHandler(ctx context.Context, message *pubsub.Message) error {
+func (h *pubSubHandler) PubSubHandler(ctx context.Context, message *infra.Message) error {
 	msg := &{{.StructName}}{}
 
 	if err := json.Unmarshal(message.Data, msg); err != nil {
