@@ -43,4 +43,4 @@ jobs:
 
     - name: Run tests
       run: |
-        make test TEST_OPT='-tags="redis emulator"'
+        make test
