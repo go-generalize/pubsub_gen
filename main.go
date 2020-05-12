@@ -5,12 +5,12 @@ import (
 	"log"
 	"os"
 
-	"github.com/gcp-kit/pubsub-gen/deploy"
-	"github.com/gcp-kit/pubsub-gen/migrate"
+	"github.com/go-generalize/pubsub_gen/deploy"
+	"github.com/go-generalize/pubsub_gen/migrate"
 
-	"github.com/gcp-kit/pubsub-gen/boilerplate"
+	"github.com/go-generalize/pubsub_gen/boilerplate"
 
-	pubsubgogen "github.com/gcp-kit/pubsub-gen/gogen"
+	pubsubgogen "github.com/go-generalize/pubsub_gen/gogen"
 )
 
 func main() {

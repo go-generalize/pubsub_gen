@@ -1,10 +1,11 @@
-module github.com/gcp-kit/pubsub-gen
+module github.com/go-generalize/pubsub_gen
 
 go 1.14
 
 require (
 	cloud.google.com/go v0.56.0
 	cloud.google.com/go/pubsub v1.3.1
+	github.com/golang/mock v1.4.3
 	github.com/google/go-cmp v0.4.0
 	github.com/iancoleman/strcase v0.0.0-20191112232945-16388991a334
 	github.com/otiai10/copy v1.1.1

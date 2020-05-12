@@ -14,7 +14,7 @@ import (
 
 	"golang.org/x/xerrors"
 
-	"github.com/gcp-kit/pubsub-gen/misc"
+	"github.com/go-generalize/pubsub_gen/misc"
 	"github.com/otiai10/copy"
 )
 

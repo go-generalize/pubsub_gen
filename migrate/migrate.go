@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/gcp-kit/pubsub-gen/infra"
+	"github.com/go-generalize/pubsub_gen/infra"
 
-	"github.com/gcp-kit/pubsub-gen/misc"
+	"github.com/go-generalize/pubsub_gen/misc"
 )
 
 func Main() {

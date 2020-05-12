@@ -5,7 +5,7 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/gcp-kit/pubsub-gen/infra"
+	"github.com/go-generalize/pubsub_gen/infra"
 )
 
 const topic = "task"
@@ -19,7 +19,7 @@ type publisher struct {
 	pubsubClient infra.Client
 }
 
-func NewPublisher(pubsubClient infra.Client) Publisher {
+func NewPublisher(pubsubClient pubsub.Client) Publisher {
 	return &publisher{pubsubClient: pubsubClient}
 }
 
@@ -45,7 +45,7 @@ func NewPubSubHandler(sub Subscriber) *pubSubHandler {
 	return &pubSubHandler{sub: sub}
 }
 
-func (h *pubSubHandler) PubSubHandler(ctx context.Context, message *infra.Message) error {
+func (h *pubSubHandler) PubSubHandler(ctx context.Context, message *pubsub.Message) error {
 	msg := &Task{}
 
 	if err := json.Unmarshal(message.Data, msg); err != nil {
