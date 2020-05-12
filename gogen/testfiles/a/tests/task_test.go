@@ -1,3 +1,4 @@
+
 package tests
 
 import (
@@ -7,9 +8,8 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	taslItem "github.com/go-generalize/pubsub_gen/gogen/testfiles/task"
 	"github.com/go-generalize/pubsub_gen/infra"
-	"github.com/go-generalize/pubsub_gen/infra/task"
+	task "github.com/go-generalize/pubsub_gen/gogen/testfiles/a"
 )
 
 type subscriber struct {
@@ -32,18 +32,18 @@ func TestPubsub(t *testing.T) {
 
 	ctx := context.Background()
 
-	taskItem := &taslItem.Task{
+	task := &task.Task{
 		Desc:    "Hello, world!",
 		Created: time.Unix(time.Now().Unix(), 0),
 		Done:    false,
 		ID:      10,
 	}
 
-	if err := publisher.PublishTask(ctx, taskItem); err != nil {
+	if err := publisher.PublishTask(ctx, task); err != nil {
 		t.Fatalf("publish failed: %+v", err)
 	}
 
-	if diff := cmp.Diff(taskItem, receivedMessage); diff != "" {
+	if diff := cmp.Diff(task, receivedMessage); diff != "" {
 		t.Errorf("received message differed(diff: %s)", diff)
 	}
 }
