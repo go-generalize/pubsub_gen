@@ -1,3 +1,4 @@
+// +build internal
 
 package tests
 
@@ -8,8 +9,8 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
-	"github.com/go-generalize/pubsub_gen/infra"
 	task "github.com/go-generalize/pubsub_gen/gogen/testfiles/a"
+	"github.com/go-generalize/pubsub_gen/infra"
 )
 
 type subscriber struct {

@@ -4,7 +4,7 @@ import (
 	"time"
 )
 
-//go:generate pubsub_generator -pubsub Task
+//go:generate pubsub_generator gogen Task
 
 type Task struct {
 	Desc    string
