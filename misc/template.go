@@ -1,10 +1,11 @@
 package misc
 
 import (
-	"github.com/rakyll/statik/fs"
-	"golang.org/x/xerrors"
 	"io/ioutil"
 	"text/template"
+
+	"github.com/rakyll/statik/fs"
+	"golang.org/x/xerrors"
 )
 
 func GetTemplate(templatePath string) (*template.Template, error) {
