@@ -10,7 +10,6 @@ import (
 	"text/template"
 
 	"github.com/go-generalize/pubsub_gen/misc"
-	_ "github.com/go-generalize/pubsub_gen/statik"
 
 	"github.com/iancoleman/strcase"
 )

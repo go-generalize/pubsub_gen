@@ -11,6 +11,7 @@ import (
 	"github.com/go-generalize/pubsub_gen/boilerplate"
 
 	pubsubgogen "github.com/go-generalize/pubsub_gen/gogen"
+	_ "github.com/go-generalize/pubsub_gen/statik"
 )
 
 func main() {
