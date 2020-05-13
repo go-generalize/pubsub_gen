@@ -1,9 +1,10 @@
 package gogen
 
 import (
-	"github.com/go-generalize/pubsub_gen/misc"
 	"io"
 	"log"
+
+	"github.com/go-generalize/pubsub_gen/misc"
 )
 
 type generator struct {
